@@ -68,4 +68,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # soccer
+
+API Soccer
+API à utiliser : https://rapidapi.com/api-sports/api/api-football?endpoint=apiendpoint_5ae0a365-b017-47ae-a512-cd575bac5f72
+Il faut renseigner une clé API gratuite pour l'utiliser, pour ça il suffit de se créer une compte sur RapidAPI.
+Je veux générer une liste des meilleurs buteurs par league.
+Commençons par générer la liste des meilleurs buteurs de ligue 1
+Tout d'abord, l'ID de la ligue 1 sur l'API est le « 4 »
+league_id = 4
+Etapes :
+
+- Créer un service qui va fetch les data depuis l'API, afin de récupérer les données liées à chaque buteur
+- Créer les composants :
+  - App : déclencher le service qui va fetch les data
+  - List: qui a prendre en props le tableau de joueurs récupéré
+  - Player: qui va gérer l'affichage des données de chaque jour via les
+  - Ce qui donne, en gros : App > List({ players }) > Player({ playerDetails })
+- Pour le design, partir sur quelque chose de simple, dans la même idée que la TodoList dans un premier temps.
+  Si tu as le temps, on pourra mettre en place un formulaire qui mettre à jour le league_id et on pourra donc changer les buteurs de ligue 1 par ceux de BPL, Liga etc.
+- une branche fetch data
+- une branche catch-data in app
+- une branche create creat-list
+- une branche creat-details-player
